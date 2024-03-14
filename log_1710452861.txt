@@ -1,1 +1,0 @@
-Get specific coin data: Coin name: nexo
