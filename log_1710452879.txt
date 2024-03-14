@@ -1,0 +1,1 @@
+Get specific coin rate: Coin name: bitcoin
