@@ -2,6 +2,7 @@ import requests
 import time
 
 API_URL = "https://api.coincap.io/v2/assets"
+LOG_FILENAME = "logs.txt"
 
 
 def get_all_coins():
@@ -67,8 +68,7 @@ def get_specific_coin_rate():
 
 def write_log(action, details):
     current_time = time.time()
-    log_filename = f"log_{int(current_time)}.txt"
-    with open(log_filename, "a") as f:
+    with open(LOG_FILENAME, "a") as f:
         f.write(f"{action}: {details}\n")
 
 
@@ -97,7 +97,6 @@ def main():
             get_specific_coin_rate()
         elif choice == "5":
             print(f"\nBye, {user_name}!")
-            write_log("Quit", "No additional details")
             break
         else:
             print("\nWrong number was entered")
